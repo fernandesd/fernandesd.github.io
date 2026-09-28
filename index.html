@@ -4,8 +4,684 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diego Fernandes — Desenvolvedor Backend PHP | Laravel | Salvador, BA</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Desenvolvedor Backend PHP e Laravel Pleno com 6+ anos de experiência em marketplaces, e-commerce e sistemas cloud (GCP, Kubernetes, Docker). Disponível para oportunidades remotas." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Diego Fernandes" />
+  <link rel="canonical" href="https://fernandesd.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fernandesd.github.io/" />
+  <meta property="og:title" content="Diego Fernandes — Desenvolvedor Backend PHP | Laravel" />
+  <meta property="og:description" content="Desenvolvedor Backend PHP e Laravel Pleno com 6+ anos de experiência em marketplaces, e-commerce e sistemas cloud." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Schema.org JSON-LD (GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Diego Fernandes",
+    "url": "https://fernandesd.github.io/",
+    "email": "diegofernandes.dev@gmail.com",
+    "jobTitle": "Desenvolvedor Backend PHP | Laravel Pleno",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Salvador",
+      "addressRegion": "BA",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/diiegofernandes/",
+      "https://github.com/fernandesd"
+    ],
+    "worksFor": { "@type": "Organization", "name": "Grupo CVLB" },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "Universidade Federal da Bahia" },
+      { "@type": "EducationalOrganization", "name": "Faculdade Vasco da Gama" }
+    ],
+    "knowsAbout": ["PHP", "Laravel", "MySQL", "Docker", "Kubernetes", "GCP", "Datadog", "Grafana", "Sentry", "Bugsnag", "MongoDB", "BigQuery", "N8N", "RESTful API", "Git", "CI/CD", "Magento", "WordPress"]
+  }
+  </script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .section-heading::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.2em;
+      background: #34d399;
+      border-radius: 2px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100">
-  <!-- seções adicionadas nas próximas tasks -->
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+
+  <!-- ===================== NAV ===================== -->
+  <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#inicio" class="text-emerald-400 font-bold text-lg tracking-tight">Diego Fernandes</a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex gap-8 text-sm text-slate-400">
+        <li><a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre</a></li>
+        <li><a href="#habilidades" class="hover:text-emerald-400 transition-colors">Habilidades</a></li>
+        <li><a href="#experiencia" class="hover:text-emerald-400 transition-colors">Experiência</a></li>
+        <li><a href="#projetos" class="hover:text-emerald-400 transition-colors">Projetos</a></li>
+        <li><a href="#formacao" class="hover:text-emerald-400 transition-colors">Formação</a></li>
+        <li><a href="#contato" class="hover:text-emerald-400 transition-colors">Contato</a></li>
+      </ul>
+
+      <!-- CTA desktop -->
+      <a href="mailto:diegofernandes.dev@gmail.com" class="hidden md:inline-flex items-center gap-2 bg-emerald-400 text-slate-950 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-emerald-300 transition-colors">
+        Contato
+      </a>
+
+      <!-- Hamburguer mobile -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menu">
+        <span class="block w-6 h-0.5 bg-slate-300"></span>
+        <span class="block w-6 h-0.5 bg-slate-300"></span>
+        <span class="block w-6 h-0.5 bg-slate-300"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 pb-4">
+      <ul class="flex flex-col gap-4 pt-4 text-slate-300">
+        <li><a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre</a></li>
+        <li><a href="#habilidades" class="hover:text-emerald-400 transition-colors">Habilidades</a></li>
+        <li><a href="#experiencia" class="hover:text-emerald-400 transition-colors">Experiência</a></li>
+        <li><a href="#projetos" class="hover:text-emerald-400 transition-colors">Projetos</a></li>
+        <li><a href="#formacao" class="hover:text-emerald-400 transition-colors">Formação</a></li>
+        <li><a href="#contato" class="hover:text-emerald-400 transition-colors">Contato</a></li>
+        <li><a href="mailto:diegofernandes.dev@gmail.com" class="inline-block bg-emerald-400 text-slate-950 font-semibold text-sm px-4 py-2 rounded-lg">Enviar e-mail</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
+      <!-- SVG grid background -->
+      <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E\"); background-size: 40px 40px;"></div>
+
+      <div class="relative z-10 text-center max-w-4xl mx-auto">
+        <!-- Badge disponível -->
+        <span class="inline-flex items-center gap-2 border border-emerald-400/40 text-emerald-400 text-xs font-medium px-3 py-1.5 rounded-full mb-8 bg-emerald-400/5">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+          Disponível para oportunidades
+        </span>
+
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-slate-100 mb-4 leading-tight">
+          Diego Fernandes
+        </h1>
+
+        <p class="text-emerald-400 text-xl md:text-2xl font-semibold mb-4">
+          Desenvolvedor Backend PHP · Laravel · Pleno
+        </p>
+
+        <p class="text-slate-400 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          Construo sistemas robustos em PHP e Laravel com foco em qualidade, observabilidade e entrega.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://www.linkedin.com/in/diiegofernandes/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 bg-emerald-400 text-slate-950 font-semibold px-7 py-3.5 rounded-lg hover:bg-emerald-300 transition-colors text-sm">
+            LinkedIn ↗
+          </a>
+          <a href="mailto:diegofernandes.dev@gmail.com"
+             class="inline-flex items-center justify-center gap-2 border border-emerald-400 text-emerald-400 font-semibold px-7 py-3.5 rounded-lg hover:bg-emerald-400/10 transition-colors text-sm">
+            Enviar e-mail
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll arrow -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <a href="#sobre" class="text-emerald-400 animate-bounce block text-2xl" aria-label="Rolar para baixo">↓</a>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
+    <section id="sobre" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <h2 class="section-heading text-2xl md:text-3xl font-semibold text-slate-100 mb-12">Sobre mim</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <!-- Texto em prosa -->
+        <div class="space-y-5 text-slate-300 leading-relaxed">
+          <p>
+            Sou desenvolvedor Backend com mais de <strong class="text-slate-100">6 anos de experiência</strong> em PHP e Laravel, atuando em projetos de marketplace, e-commerce, agências digitais e sistemas internos de médio e grande porte.
+          </p>
+          <p>
+            Ao longo da carreira, trabalhei em diferentes contextos — de startups a empresas consolidadas —, sempre focado em entregar funcionalidades robustas, integrações com APIs externas e soluções que funcionam em produção com qualidade. Tenho experiência com infraestrutura em nuvem no GCP, configuração de clusters Kubernetes e observabilidade com Datadog, Grafana, Sentry e Bugsnag.
+          </p>
+          <p>
+            Gosto de entender o problema antes de sair codando, prezar pela legibilidade do código e manter o ambiente de produção saudável — não só entregar features. Atualmente cursando <strong class="text-slate-100">Pós-Graduação em Engenharia de Software</strong> e aberto a oportunidades remotas ou híbridas.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 text-center">
+            <p class="text-4xl font-bold text-emerald-400 mb-1">6+</p>
+            <p class="text-slate-400 text-sm">Anos de experiência</p>
+          </div>
+          <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 text-center">
+            <p class="text-4xl font-bold text-emerald-400 mb-1">10+</p>
+            <p class="text-slate-400 text-sm">Projetos entregues</p>
+          </div>
+          <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 text-center">
+            <p class="text-4xl font-bold text-emerald-400 mb-1">5</p>
+            <p class="text-slate-400 text-sm">Empresas</p>
+          </div>
+          <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 text-center">
+            <p class="text-4xl font-bold text-emerald-400 mb-1">3</p>
+            <p class="text-slate-400 text-sm">Stacks de cloud</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section id="habilidades" class="bg-slate-900/50 py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-heading text-2xl md:text-3xl font-semibold text-slate-100 mb-12">Habilidades técnicas</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Backend -->
+          <div>
+            <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Backend</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge">PHP 8+</span>
+              <span class="badge">Laravel</span>
+              <span class="badge">Eloquent ORM</span>
+              <span class="badge">RESTful API</span>
+              <span class="badge">Queue Jobs</span>
+              <span class="badge">MVC</span>
+              <span class="badge">Migrations</span>
+            </div>
+          </div>
+
+          <!-- Cloud & Infra -->
+          <div>
+            <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Cloud & Infraestrutura</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge">GCP</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge">Docker</span>
+              <span class="badge">Cloud Functions</span>
+              <span class="badge">Digital Ocean</span>
+              <span class="badge">CI/CD</span>
+            </div>
+          </div>
+
+          <!-- Banco de Dados -->
+          <div>
+            <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Banco de Dados</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge">MySQL</span>
+              <span class="badge">MongoDB</span>
+              <span class="badge">BigQuery</span>
+            </div>
+          </div>
+
+          <!-- Observabilidade -->
+          <div>
+            <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Observabilidade</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge">Datadog</span>
+              <span class="badge">Grafana</span>
+              <span class="badge">Sentry</span>
+              <span class="badge">Bugsnag</span>
+            </div>
+          </div>
+
+          <!-- Automação & Ferramentas -->
+          <div>
+            <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Automação & Ferramentas</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge">N8N</span>
+              <span class="badge">Git</span>
+              <span class="badge">GitLab</span>
+              <span class="badge">GitHub</span>
+              <span class="badge">Jira</span>
+              <span class="badge">Kanban</span>
+            </div>
+          </div>
+
+          <!-- Boas Práticas -->
+          <div>
+            <h3 class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Boas Práticas</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge">Clean Code</span>
+              <span class="badge">SOLID</span>
+              <span class="badge">Code Review</span>
+              <span class="badge">Magento</span>
+              <span class="badge">WordPress</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIÊNCIA ===================== -->
+    <section id="experiencia" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <h2 class="section-heading text-2xl md:text-3xl font-semibold text-slate-100 mb-12">Experiência profissional</h2>
+
+      <div class="relative border-l-2 border-emerald-400/20 ml-3 md:ml-4 space-y-10">
+
+        <!-- CVLB -->
+        <article class="relative pl-8 md:pl-10">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-400 border-2 border-slate-950"></span>
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-semibold text-slate-100">Grupo CVLB</h3>
+            <span class="level-badge bg-emerald-400/10 text-emerald-400 border-emerald-400/30">Pleno</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Desenvolvedor Backend PHP</p>
+          <p class="text-slate-500 text-xs mb-4">julho 2023 – presente · Salvador, BA</p>
+          <ul class="text-slate-300 text-sm space-y-1.5 list-none">
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Desenvolvo e mantenho sistemas internos em Laravel e PHP como stack principal.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Configurei e mantenho cluster Kubernetes no GCP com deploy de serviços em produção.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Instrumento serviços com Datadog e Grafana para observabilidade e rastreamento de erros de ponta a ponta.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Utilizo Cloud Functions e BigQuery (GCP) e automatizo processos repetitivos com N8N.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="stack-badge">PHP</span><span class="stack-badge">Laravel</span><span class="stack-badge">Kubernetes</span><span class="stack-badge">GCP</span><span class="stack-badge">Datadog</span><span class="stack-badge">Grafana</span><span class="stack-badge">N8N</span>
+          </div>
+        </article>
+
+        <!-- NBZ -->
+        <article class="relative pl-8 md:pl-10">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-2 border-slate-950"></span>
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-semibold text-slate-100">Agência NBZ</h3>
+            <span class="level-badge bg-emerald-400/10 text-emerald-400 border-emerald-400/30">Pleno</span>
+            <span class="level-badge bg-slate-700/50 text-slate-400 border-slate-600">Freelancer</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Desenvolvedor Backend PHP</p>
+          <p class="text-slate-500 text-xs mb-4">março 2022 – agosto 2026 · Remoto</p>
+          <ul class="text-slate-300 text-sm space-y-1.5 list-none">
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Atuei no desenvolvimento e manutenção de projetos em Laravel para clientes de diferentes segmentos.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Integrei Bugsnag para captura e monitoramento de erros em tempo real em produção.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Realizei refatorações pontuais em código legado para melhorar legibilidade e performance.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="stack-badge">PHP</span><span class="stack-badge">Laravel</span><span class="stack-badge">MySQL</span><span class="stack-badge">Bugsnag</span><span class="stack-badge">GitLab</span>
+          </div>
+        </article>
+
+        <!-- VX Case -->
+        <article class="relative pl-8 md:pl-10">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-2 border-slate-950"></span>
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-semibold text-slate-100">VX Case</h3>
+            <span class="level-badge bg-blue-400/10 text-blue-400 border-blue-400/30">Júnior</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Desenvolvedor Backend</p>
+          <p class="text-slate-500 text-xs mb-4">fevereiro 2021 – setembro 2022 · Brasil</p>
+          <ul class="text-slate-300 text-sm space-y-1.5 list-none">
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Desenvolvi features no backend de projetos internos e integrei a plataforma Magento de uma empresa com presença nacional.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Implementei funcionalidades em Laravel com persistência em MySQL e MongoDB, containerização com Docker.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="stack-badge">Laravel</span><span class="stack-badge">MySQL</span><span class="stack-badge">MongoDB</span><span class="stack-badge">Docker</span><span class="stack-badge">Magento</span>
+          </div>
+        </article>
+
+        <!-- Retriever -->
+        <article class="relative pl-8 md:pl-10">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-2 border-slate-950"></span>
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-semibold text-slate-100">Retriever Marketplace</h3>
+            <span class="level-badge bg-slate-700/50 text-slate-400 border-slate-600">Freelancer</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Desenvolvedor Full Stack</p>
+          <p class="text-slate-500 text-xs mb-4">outubro 2020 – setembro 2022 · Salvador, BA</p>
+          <ul class="text-slate-300 text-sm space-y-1.5 list-none">
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Desenvolvi o marketplace RetrieverApp (serviços e produtos para pets), implementando correções e novas funcionalidades.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Responsável pelo DevOps do projeto: configuração e manutenção de infraestrutura na Digital Ocean.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="stack-badge">PHP</span><span class="stack-badge">Laravel</span><span class="stack-badge">MySQL</span><span class="stack-badge">WordPress</span><span class="stack-badge">Docker</span><span class="stack-badge">Digital Ocean</span>
+          </div>
+        </article>
+
+        <!-- Versatte -->
+        <article class="relative pl-8 md:pl-10">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-2 border-slate-950"></span>
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-semibold text-slate-100">Versatte Marketplace</h3>
+            <span class="level-badge bg-slate-700/50 text-slate-400 border-slate-600">Freelancer</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Desenvolvedor Web PHP</p>
+          <p class="text-slate-500 text-xs mb-4">março 2020 – dezembro 2020 · Brasil</p>
+          <ul class="text-slate-300 text-sm space-y-1.5 list-none">
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Co-desenvolvi do zero um marketplace em Laravel com cadastro, loja, produtos, checkout PagarmE, e-mail e SEO.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Integrei o Sentry para rastreamento de erros em tempo real em produção.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="stack-badge">Laravel</span><span class="stack-badge">MySQL</span><span class="stack-badge">PagarmE</span><span class="stack-badge">Sentry</span>
+          </div>
+        </article>
+
+        <!-- INTERFACE -->
+        <article class="relative pl-8 md:pl-10">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-2 border-slate-950"></span>
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-semibold text-slate-100">INTERFACE — Tecnologia em Sistemas</h3>
+            <span class="level-badge bg-amber-400/10 text-amber-400 border-amber-400/30">Estágio</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Desenvolvedor de Sistemas</p>
+          <p class="text-slate-500 text-xs mb-4">outubro 2019 – março 2020 · Salvador, BA</p>
+          <ul class="text-slate-300 text-sm space-y-1.5 list-none">
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Desenvolvi funcionalidades em sistemas utilizados pelos clientes da empresa com foco em JavaScript e Git.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="stack-badge">JavaScript</span><span class="stack-badge">Git</span>
+          </div>
+        </article>
+
+        <!-- InfoJr -->
+        <article class="relative pl-8 md:pl-10">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-2 border-slate-950"></span>
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-semibold text-slate-100">InfoJr — Empresa Júnior UFBA</h3>
+            <span class="level-badge bg-purple-400/10 text-purple-400 border-purple-400/30">Trainee</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Trainee → Vice-presidente</p>
+          <p class="text-slate-500 text-xs mb-4">agosto 2017 – dezembro 2019 · Salvador, BA</p>
+          <ul class="text-slate-300 text-sm space-y-1.5 list-none">
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Ingressei como trainee e progredi até Vice-presidente, assumindo gestão de projetos e liderança de equipe.</li>
+            <li class="flex gap-2"><span class="text-emerald-400 shrink-0">▹</span>Desenvolvi sites e sistemas web com PHP, Laravel e MySQL para clientes externos.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5 mt-4">
+            <span class="stack-badge">PHP</span><span class="stack-badge">Laravel</span><span class="stack-badge">MySQL</span><span class="stack-badge">JavaScript</span><span class="stack-badge">GitLab</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== PROJETOS ===================== -->
+    <section id="projetos" class="bg-slate-900/50 py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-heading text-2xl md:text-3xl font-semibold text-slate-100 mb-12">Projetos em destaque</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- RetrieverApp -->
+          <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 hover:border-emerald-400/50 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <p class="text-slate-500 text-xs font-medium mb-1">Retriever Marketplace</p>
+                <h3 class="font-semibold text-slate-100 text-lg">RetrieverApp</h3>
+              </div>
+              <span class="text-2xl">🐾</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+              Marketplace de serviços e produtos para pets. Implementei correções, melhorias e novas funcionalidades, além do site institucional com blog e toda a infraestrutura DevOps na Digital Ocean.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="stack-badge">PHP</span><span class="stack-badge">Laravel</span><span class="stack-badge">MySQL</span><span class="stack-badge">WordPress</span><span class="stack-badge">Docker</span>
+            </div>
+            <p class="text-slate-600 text-xs mt-auto">Em breve no GitHub</p>
+          </div>
+
+          <!-- Versatte -->
+          <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 hover:border-emerald-400/50 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <p class="text-slate-500 text-xs font-medium mb-1">Versatte</p>
+                <h3 class="font-semibold text-slate-100 text-lg">Versatte Marketplace</h3>
+              </div>
+              <span class="text-2xl">🛒</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+              Marketplace construído do zero em Laravel com cadastro de usuários, loja, produtos, checkout transparente via PagarmE, e-mail transacional, SEO e monitoramento de erros com Sentry.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="stack-badge">Laravel</span><span class="stack-badge">MySQL</span><span class="stack-badge">PagarmE</span><span class="stack-badge">Sentry</span>
+            </div>
+            <p class="text-slate-600 text-xs mt-auto">Em breve no GitHub</p>
+          </div>
+
+          <!-- CVLB Infra -->
+          <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 hover:border-emerald-400/50 transition-colors flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <p class="text-slate-500 text-xs font-medium mb-1">Grupo CVLB</p>
+                <h3 class="font-semibold text-slate-100 text-lg">Infra & Observabilidade</h3>
+              </div>
+              <span class="text-2xl">☁️</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+              Cluster Kubernetes no GCP com deploy de serviços em produção, instrumentação com Datadog e Grafana, uso de Cloud Functions e BigQuery, e automação de processos com N8N.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="stack-badge">Kubernetes</span><span class="stack-badge">GCP</span><span class="stack-badge">Datadog</span><span class="stack-badge">Grafana</span><span class="stack-badge">N8N</span>
+            </div>
+            <p class="text-slate-600 text-xs mt-auto">Em breve no GitHub</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMAÇÃO ===================== -->
+    <section id="formacao" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <h2 class="section-heading text-2xl md:text-3xl font-semibold text-slate-100 mb-12">Formação & Certificações</h2>
+
+      <div class="space-y-4 max-w-2xl">
+
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-5 flex gap-4 items-start hover:border-slate-600 transition-colors">
+          <span class="text-2xl shrink-0">🎓</span>
+          <div>
+            <h3 class="font-semibold text-slate-100 text-sm">Pós-Graduação Lato Sensu em Engenharia de Software</h3>
+            <p class="text-slate-400 text-sm">Universidade Pitágoras Unopar Anhanguera · EAD</p>
+            <p class="text-emerald-400 text-xs mt-1 font-medium">Em andamento — conclusão prevista abr/2027</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-5 flex gap-4 items-start hover:border-slate-600 transition-colors">
+          <span class="text-2xl shrink-0">🎓</span>
+          <div>
+            <h3 class="font-semibold text-slate-100 text-sm">Bacharelado em Ciência da Computação</h3>
+            <p class="text-slate-400 text-sm">Universidade Federal da Bahia (UFBA)</p>
+            <p class="text-slate-500 text-xs mt-1">Não concluído</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-5 flex gap-4 items-start hover:border-slate-600 transition-colors">
+          <span class="text-2xl shrink-0">🎓</span>
+          <div>
+            <h3 class="font-semibold text-slate-100 text-sm">Bacharelado em Ciências Contábeis</h3>
+            <p class="text-slate-400 text-sm">Faculdade Vasco da Gama</p>
+            <p class="text-slate-500 text-xs mt-1">Concluído em 2017</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-5 flex gap-4 items-start hover:border-slate-600 transition-colors">
+          <span class="text-2xl shrink-0">🏆</span>
+          <div>
+            <h3 class="font-semibold text-slate-100 text-sm">Semana OmniStack 11</h3>
+            <p class="text-slate-400 text-sm">Rocketseat</p>
+            <p class="text-slate-500 text-xs mt-1">Node.js · React · React Native</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="contato" class="bg-slate-900/50 py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-10 md:p-16 text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-semibold text-slate-100 mb-3">Vamos trabalhar juntos?</h2>
+          <p class="text-slate-400 mb-10 leading-relaxed">
+            Aberto a oportunidades remotas ou híbridas como Desenvolvedor Backend Pleno.<br />
+            Me manda uma mensagem — responderei em breve.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:diegofernandes.dev@gmail.com"
+               class="inline-flex items-center justify-center gap-2 bg-emerald-400 text-slate-950 font-semibold px-7 py-3.5 rounded-lg hover:bg-emerald-300 transition-colors text-sm">
+              ✉ diegofernandes.dev@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/diiegofernandes/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 border border-emerald-400 text-emerald-400 font-semibold px-7 py-3.5 rounded-lg hover:bg-emerald-400/10 transition-colors text-sm">
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-slate-800 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-sm">
+      © <span id="year"></span> Diego Fernandes · Feito com HTML e Tailwind CSS · Salvador, BA
+    </div>
+
+    <!-- FAQ GEO: invisível para usuários, visível para crawlers e IAs -->
+    <div class="sr-only">
+      <h2>Perguntas frequentes sobre Diego Fernandes</h2>
+      <dl>
+        <dt>Quais tecnologias Diego Fernandes domina?</dt>
+        <dd>Diego Fernandes é especialista em PHP 8+, Laravel, MySQL, Docker, Kubernetes, GCP, Datadog, Grafana, Sentry, Bugsnag, MongoDB, BigQuery e N8N. Também tem experiência com WordPress, Magento e integração de gateways de pagamento como PagarmE.</dd>
+        <dt>Diego Fernandes tem experiência com Kubernetes?</dt>
+        <dd>Sim. Diego configurou e mantém um cluster Kubernetes no Google Cloud Platform (GCP) com deploy de serviços em produção no Grupo CVLB, além de containerização com Docker em múltiplos projetos.</dd>
+        <dt>Diego Fernandes está disponível para trabalho remoto?</dt>
+        <dd>Sim. Diego está aberto a oportunidades remotas ou híbridas como Desenvolvedor Backend Pleno em PHP e Laravel.</dd>
+        <dt>Qual a experiência de Diego Fernandes com Laravel?</dt>
+        <dd>Diego trabalha com Laravel há mais de 6 anos, tendo atuado em projetos de marketplace, e-commerce, agências digitais e sistemas internos de médio e grande porte. Tem experiência com Eloquent ORM, Queue Jobs, Migrations e APIs RESTful em Laravel.</dd>
+        <dt>Diego Fernandes tem experiência com observabilidade?</dt>
+        <dd>Sim. Diego tem experiência com Datadog, Grafana, Sentry e Bugsnag para monitoramento de métricas, rastreamento de erros e observabilidade de sistemas em produção.</dd>
+        <dt>Como entrar em contato com Diego Fernandes?</dt>
+        <dd>Você pode entrar em contato com Diego Fernandes pelo e-mail diegofernandes.dev@gmail.com ou pelo LinkedIn em linkedin.com/in/diiegofernandes.</dd>
+      </dl>
+    </div>
+  </footer>
+
+  <!-- Tailwind class definitions para componentes reutilizáveis -->
+  <style>
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(52,211,153,0.3);
+      color: #34d399;
+      font-size: 0.75rem;
+      background: rgba(52,211,153,0.05);
+    }
+    .stack-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(71,85,105,0.6);
+      color: #94a3b8;
+      font-size: 0.7rem;
+      background: rgba(30,41,59,0.5);
+    }
+    .level-badge {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      border: 1px solid;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    /* Tailwind sr-only equivalent */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // Ano dinâmico no footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fechar menu ao clicar em link
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Scroll suave com offset para nav fixa (~64px)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const offset = 72;
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Fade-in com IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.remove('opacity-0', 'translate-y-4');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('section').forEach(s => {
+      s.classList.add('opacity-0', 'translate-y-4', 'transition', 'duration-700');
+      observer.observe(s);
+    });
+  </script>
+
 </body>
 </html>
